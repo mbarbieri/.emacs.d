@@ -19,10 +19,30 @@
 ;; PACKAGES
 (use-package helm
   :bind ("M-x" . helm-M-x))
+(use-package magit)
+(use-package git-gutter+
+  :init
+  (global-git-gutter+-mode))
+(use-package smartparens
+  :init
+  (require 'smartparens-config))
+(use-package clojure-mode
+  :init
+  (add-hook 'clojure-mode-hook #'eldoc-mode)
+  (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
+  (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+  (add-hook 'clojure-mode-hook #'smartparens-strict-mode))
+(use-package clojure-mode-extra-font-locking)
+(use-package cider)
+(use-package rainbow-delimiters)
+(use-package projectile
+  :init (projectile-mode))
+(use-package helm-projectile)
+(use-package aggressive-indent)
 
 
 
-;; APPEARENCE
+;; Appearence
 
 ;; hide menu/tool/scroll bars
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -42,7 +62,11 @@
  '(custom-enabled-themes (quote (monokai)))
  '(custom-safe-themes
    (quote
-    ("c924950f6b5b92a064c5ad7063bb34fd3facead47cd0d761a31e7e76252996f7" default))))
+    ("c924950f6b5b92a064c5ad7063bb34fd3facead47cd0d761a31e7e76252996f7" default)))
+ '(org-agenda-files (quote ("~/Dropbox/org/todo.org")))
+ '(package-selected-packages
+   (quote
+    (helm-projectile cider clojure-mode-extra-font-locking clojure-mode paredit magit use-package helm-fuzzy-find dracula-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
