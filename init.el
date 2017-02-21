@@ -37,6 +37,8 @@
 (use-package rainbow-delimiters)
 (use-package projectile
   :init (projectile-mode))
+(use-package helm-cider
+  :init (helm-cider-mode 1))
 (use-package helm-projectile)
 (use-package aggressive-indent)
 
@@ -66,7 +68,7 @@
  '(org-agenda-files (quote ("~/Dropbox/org/todo.org")))
  '(package-selected-packages
    (quote
-    (helm-projectile cider clojure-mode-extra-font-locking clojure-mode paredit magit use-package helm-fuzzy-find dracula-theme))))
+    (helm-cider helm-projectile cider clojure-mode-extra-font-locking clojure-mode paredit magit use-package helm-fuzzy-find dracula-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
