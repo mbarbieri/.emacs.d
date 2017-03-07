@@ -15,7 +15,6 @@
   (require 'use-package))
 (setq use-package-always-ensure t)
 
-
 ;; PACKAGES
 (use-package helm
   :bind ("M-x" . helm-M-x))
@@ -41,7 +40,10 @@
   :init (helm-cider-mode 1))
 (use-package helm-projectile)
 (use-package aggressive-indent)
+(use-package epresent)
 
+;; Org-mode
+(setq org-log-done 'time)
 
 
 ;; Appearence
@@ -50,6 +52,8 @@
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
+(setq org-src-fontify-natively t)
 
 ;; hide splash scree
 (setq inhibit-startup-message t)
@@ -68,7 +72,7 @@
  '(org-agenda-files (quote ("~/Dropbox/org/todo.org")))
  '(package-selected-packages
    (quote
-    (helm-cider helm-projectile cider clojure-mode-extra-font-locking clojure-mode paredit magit use-package helm-fuzzy-find dracula-theme))))
+    (epresent helm-cider helm-projectile cider clojure-mode-extra-font-locking clojure-mode paredit magit use-package helm-fuzzy-find dracula-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
