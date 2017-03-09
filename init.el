@@ -81,6 +81,7 @@
  '(custom-safe-themes
    (quote
     ("c924950f6b5b92a064c5ad7063bb34fd3facead47cd0d761a31e7e76252996f7" default)))
+ '(indent-tabs-mode nil)
  '(org-agenda-files (quote ("~/Dropbox/org/todo.org")))
  '(package-selected-packages
    (quote
