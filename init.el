@@ -4,13 +4,12 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
+;; USE PACKAGE
 (setq package-enable-at-startup nil)
 (package-initialize)
-
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-
 (eval-when-compile
   (require 'use-package))
 (setq use-package-always-ensure t)
@@ -42,6 +41,19 @@
 (use-package aggressive-indent)
 (use-package epresent)
 
+
+;; EMACS CONFIGURAIONS
+;; backup files
+(setq
+   backup-by-copying t      ; don't clobber symlinks
+   backup-directory-alist
+    '(("." . "~/.saves"))    ; don't litter my fs tree
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)       ; use versioned backups
+
+;; PACKAGE CONFIGURATIONS
 ;; Org-mode
 (setq org-log-done 'time)
 
