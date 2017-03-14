@@ -56,9 +56,7 @@
    version-control t)       ; use versioned backups
 
 ;; PACKAGE CONFIGURATIONS
-;; Org-mode
-(setq org-log-done 'time)
-
+(load-file "~/.emacs.d/org-mode.el")
 
 ;; Appearence
 
