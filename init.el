@@ -42,7 +42,8 @@
 (use-package epresent)
 (use-package handlebars-mode
   :init (require 'handlebars-mode))
-
+(use-package json-mode)
+(load-file "~/.emacs.d/flycheck.el")
 
 ;; EMACS CONFIGURAIONS
 ;; backup files
@@ -70,7 +71,7 @@
 ;; hide splash scree
 (setq inhibit-startup-message t)
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/") 
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -85,7 +86,7 @@
  '(org-agenda-files (quote ("~/Dropbox/org/todo.org")))
  '(package-selected-packages
    (quote
-    (handlebars-mode epresent helm-cider helm-projectile cider clojure-mode-extra-font-locking clojure-mode paredit magit use-package helm-fuzzy-find dracula-theme))))
+    (flycheck-color-mode-line flycheck json-mode handlebars-mode epresent helm-cider helm-projectile cider clojure-mode-extra-font-locking clojure-mode paredit magit use-package helm-fuzzy-find dracula-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
