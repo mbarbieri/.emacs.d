@@ -17,22 +17,6 @@
 ;; PACKAGES
 (use-package helm
   :bind ("M-x" . helm-M-x))
-(use-package magit)
-(use-package git-gutter+
-  :init
-  (global-git-gutter+-mode))
-(use-package smartparens
-  :init
-  (require 'smartparens-config))
-(use-package clojure-mode
-  :init
-  (add-hook 'clojure-mode-hook #'eldoc-mode)
-  (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
-  (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
-  (add-hook 'clojure-mode-hook #'smartparens-strict-mode))
-(use-package clojure-mode-extra-font-locking)
-(use-package cider)
-(use-package rainbow-delimiters)
 (use-package projectile
   :init (projectile-mode))
 (use-package helm-cider
@@ -43,6 +27,8 @@
 (use-package handlebars-mode
   :init (require 'handlebars-mode))
 (use-package json-mode)
+(load-file "~/.emacs.d/git.el")
+(load-file "~/.emacs.d/clojure.el")
 (load-file "~/.emacs.d/flycheck.el")
 
 ;; EMACS CONFIGURAIONS
