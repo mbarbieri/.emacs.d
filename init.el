@@ -27,6 +27,11 @@
 (use-package handlebars-mode
   :init (require 'handlebars-mode))
 (use-package json-mode)
+(use-package neotree
+  :ensure projectile
+  :init (setq projectile-switch-project-action 'neotree-projectile-action)
+  :bind
+  ("<f8>" . neotree-toggle))
 (load-file "~/.emacs.d/git.el")
 (load-file "~/.emacs.d/clojure.el")
 (load-file "~/.emacs.d/flycheck.el")
@@ -72,7 +77,7 @@
  '(org-agenda-files (quote ("~/Dropbox/org/todo.org")))
  '(package-selected-packages
    (quote
-    (flycheck-color-mode-line flycheck json-mode handlebars-mode epresent helm-cider helm-projectile cider clojure-mode-extra-font-locking clojure-mode paredit magit use-package helm-fuzzy-find dracula-theme))))
+    (neotree circe flycheck-color-mode-line flycheck json-mode handlebars-mode epresent helm-cider helm-projectile cider clojure-mode-extra-font-locking clojure-mode paredit magit use-package helm-fuzzy-find dracula-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
