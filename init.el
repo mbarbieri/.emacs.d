@@ -34,6 +34,12 @@
   ("<f8>" . neotree-toggle))
 (use-package ace-jump-mode
   :bind ("C-0" . ace-jump-mode))
+(use-package web-mode
+  :init
+  (setq web-mode-enable-auto-pairing t
+        web-mode-enable-auto-expanding t))
+(use-package vue-html-mode)
+(use-package vue-mode)
 (load-file "~/.emacs.d/git.el")
 (load-file "~/.emacs.d/clojure.el")
 (load-file "~/.emacs.d/flycheck.el")
@@ -79,7 +85,7 @@
  '(org-agenda-files (quote ("~/Dropbox/org/todo.org")))
  '(package-selected-packages
    (quote
-    (ace-jump-mode neotree circe flycheck-color-mode-line flycheck json-mode handlebars-mode epresent helm-cider helm-projectile cider clojure-mode-extra-font-locking clojure-mode paredit magit use-package helm-fuzzy-find dracula-theme))))
+    (web-mode vue-html-mode vue-mode ace-jump-mode neotree circe flycheck-color-mode-line flycheck json-mode handlebars-mode epresent helm-cider helm-projectile cider clojure-mode-extra-font-locking clojure-mode paredit magit use-package helm-fuzzy-find dracula-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
